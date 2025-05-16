@@ -1,0 +1,83 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1e2f7;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #161855, #1a9ea4); /* Gym-style gradient */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-right: 600px;
+}
+
+h1 {
+    color: #f9f4f4;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #fb7907;
+    color: #fcf4f4;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input[type="submit"]:hover {
+    background-color: #e4360a;
+}
+
+.success {
+    color: #5bc0de;
+}
+
+.error {
+    color: #d9534f;
+}
+
+.announcement {
+    margin-bottom: 20px;
+}
+
+.announcement h2 {
+    margin: 0;
+    color: #f6f0f0;
+}
+
+.announcement p {
+    margin: 10px 0;
+}
+
+.announcement small {
+    color: #888;
+}
+
+/* General Styling */

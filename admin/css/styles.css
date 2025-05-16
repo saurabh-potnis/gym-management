@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+
+        background: url('img/img1.jpg') no-repeat center center/cover !important;
+    
+    height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+h2{
+    color: aqua;
+}
+/* Semi-transparent Login Container */
+.login-container {
+background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+padding: 30px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+text-align: center;
+color: #fff;
+width: 350px;
+}
+
+/* Input Fields */
+.input-group {
+margin-bottom: 15px;
+text-align: left;
+}
+
+.input-group label {
+display: block;
+font-size: 14px;
+margin-bottom: 5px;
+}
+
+.input-group input {
+width: 100%;
+padding: 10px;
+border: none;
+border-radius: 5px;
+}
+
+/* Login Button */
+button {
+width: 100%;
+padding: 10px;
+background: #ffcc00;
+color: #000;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+font-weight: bold;
+transition: 0.3s;
+}
+
+button:hover {
+background: #ffaa00;
+}
+
+/* Back Button */
+.back-button {
+display: block;
+margin-top: 15px;
+text-decoration: none;
+color: #ffcc00;
+font-weight: bold;
+}
+
+.back-button:hover {
+color: #ffaa00;
+}

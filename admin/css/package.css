@@ -1,0 +1,190 @@
+/* ====== General Styling ====== */
+body {
+    background: #e5e8f5;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* ====== Main Wrapper ====== */
+.wrapper {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* ====== Heading Styling ====== */
+.heading {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(25, 24, 24);
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ====== Package Selection Dropdown ====== */
+.package-selection {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.package-selection label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.package-selection select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: white;
+    color: rgb(19, 13, 13);
+    width: 220px;
+    text-align: center;
+}
+
+/* ====== Container for Form & Preview ====== */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #127df0, #1a9ea4);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* ====== Left Section: Form ====== */
+.form-section {
+    flex: 1;
+    min-width: 55%;
+    padding-right: 20px;
+}
+
+/* ====== Form Styling ====== */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ====== Label Styling ====== */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 8px 0 4px;
+    text-align: left;
+}
+
+/* ====== Input Fields Styling ====== */
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgb(250, 246, 246);
+}
+select{
+    background-color: aliceblue;
+    color: black;
+}
+/* ====== Textarea Styling ====== */
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* ====== Button Styling ====== */
+button {
+    background: #08f30b;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #3bdd0a;
+    box-shadow: 0 0 10px rgba(47, 224, 248, 0.8);
+    transform: scale(1.03);
+}
+
+/* ====== Delete Button Styling ====== */
+.delete-btn {
+    background: red;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+/* ====== Right Section: Preview ====== */
+.preview {
+    flex: 0.4;
+    max-width: 350px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* ====== Responsive Design for Mobile ====== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-section {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .preview {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+/* Wrapper for Price & Duration */
+.price-duration-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;  /* Spacing between the fields */
+    align-items: center; /* Align fields properly */
+    width: 100%;
+}
+
+/* Ensures both fields take equal space */
+.price-duration-container div {
+    flex: 1;
+}
+
+/* Input Styling */
+.price-duration-container input {
+    width: 100%; /* Make input fields equal width */
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
