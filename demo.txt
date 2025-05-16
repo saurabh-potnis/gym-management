@@ -1,0 +1,248 @@
+<section class="section-memberships" id="memberships">
+      <div class="container memberships">
+        <h2 class="title">Memberships</h2>
+        <div class="classes">
+          <div class="class" data-aos="flip-left">
+            <h2 class="class-name">3 Months</h2>
+            <div class="class-price">$100/MON USD</div>
+            <hr />
+            <div class="class-name">
+              <ul>
+                <li>5 Classes</li>
+                <li>5 In Personal Training Sessions</li>
+                <li>Full Gym & Facilities Access</li>
+                <li>Gym Tour & Training Instruction</li>
+              </ul>
+            </div>
+            <a>Get Started</a>
+          </div>
+          <div class="class" data-aos="flip-up">
+            <h2 class="class-name">6 Months</h2>
+            <div class="class-price">$75/MON USD</div>
+            <hr />
+            <div class="class-name">
+              <ul>
+                <li>10 Classes</li>
+                <li>10 In Personal Training Sessions</li>
+                <li>Full Gym & Facilities Access</li>
+                <li>Boxing Ring, Free Events</li>
+                <li>Gym Tour & Training Instruction</li>
+              </ul>
+            </div>
+            <a>Get Started</a>
+          </div>
+          <div class="class" data-aos="flip-right">
+            <h2 class="class-name">1 Whole Year</h2>
+            <div class="class-price">$50/MON USD</div>
+            <hr />
+            <div class="class-name">
+              <ul>
+                <li>10 Classes</li>
+                <li>15 In Personal Training Sessions</li>
+                <li>Full Gym & Facilities Access</li>
+                <li>Boxing Ring, Free Events</li>
+                <li>Gym Tour & Training Instruction</li>
+              </ul>
+            </div>
+            <a>Get Started</a>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+   
+   
+    <style>
+    body .section-memberships {
+  padding: clamp(4rem, 10vw, 8rem) 0;
+}
+
+body .section-memberships .memberships {
+  padding: 3rem 3rem;
+  position: relative;
+}
+
+body .section-memberships .memberships .title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+body .section-memberships .memberships .classes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(min-content, 1fr)) [var];
+  grid-template-columns: repeat(
+    var(--three-col-layout),
+    minmax(-webkit-min-content, 1fr)
+  );
+  grid-template-columns: repeat(
+    var(--three-col-layout),
+    minmax(min-content, 1fr)
+  );
+  grid-column-gap: 10rem;
+  grid-row-gap: 5rem;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin: 20px 70px;
+}
+
+@media only screen and (max-width: 50em) {
+  body .section-memberships .memberships .classes {
+    margin: 0px;
+  }
+}
+
+body .section-memberships .memberships .classes .class {
+  cursor: pointer;
+  background-color: #414141;
+  z-index: 10;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body .section-memberships .memberships .classes .class .class-name {
+  padding: 1.5rem;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+body .section-memberships .memberships .classes .class .class-price {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+body .section-memberships .memberships .classes .class ul {
+  padding: 2rem;
+  list-style: none;
+}
+
+body .section-memberships .memberships .classes .class ul li {
+  margin: 15px 0px;
+}
+
+body .section-memberships .memberships .classes .class a {
+  width: 100%;
+  padding: 15px;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: var(--color-yellow);
+}
+
+body .section-memberships .memberships .classes .class a:hover {
+  background-color: var(--color-yellow-dark);
+}
+
+body .section-memberships .memberships .classes .class:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.29) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.218) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.29) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.218) 0px 0px 0px 1px;
+}
+
+    </style>
+
+
+    php
+       <div class="container">
+        <h1>Our Packages</h1>
+        <?php if ($result->num_rows > 0): ?>
+            <?php while($row = $result->fetch_assoc()): ?>
+                <div class="package">
+                    <h2><?php echo htmlspecialchars($row['package_name']); ?></h2>
+                    <p><?php echo nl2br(htmlspecialchars($row['description'])); ?></p>
+                    <p><strong>Price:</strong> $<?php echo number_format($row['price'], 2); ?></p>
+                </div>
+            <?php endwhile; ?>
+        <?php else: ?>
+            <p>No packages available at the moment.</p>
+        <?php endif; ?>
+    </div>
+
+
+    <style>
+    .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+.success {
+    color: #5bc0de;
+}
+
+.error {
+    color: #d9534f;
+}
+
+.package {
+    margin-bottom: 20px;
+}
+
+.package h2 {
+    margin: 0;
+    color: #333;
+}
+
+.package p {
+    margin: 10px 0;
+    color: #000;
+}
+
+</style>
