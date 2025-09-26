@@ -8,7 +8,7 @@ The project is fully containerized using **Docker** for easy setup and portabili
 
 Dashboard Page:
 
-![Dashboard](dashboard.png)
+![Dashboard](img/dashboard.png)
 
 ## 🚀 Features
 
