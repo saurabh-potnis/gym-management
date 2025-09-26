@@ -2,7 +2,7 @@
 
 This is a full-stack Gym Website developed using **PHP**, **MySQL**, **HTML**, **CSS**, and **JavaScript**.  
 It allows users to view gym plans, register, and manage profiles. Admins can manage members, plans, and trainers.
-
+The project is fully containerized using **Docker** for easy setup and portability.
 ---
 
 ## 🚀 Features
@@ -21,6 +21,7 @@ It allows users to view gym plans, register, and manage profiles. Admins can man
 - Frontend: HTML, CSS, JavaScript
 - Backend: PHP
 - Database: MySQL
+- Containerization: Docker, Docker Compose
 
 ---
 
