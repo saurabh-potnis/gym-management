@@ -2,7 +2,9 @@
 session_start(); // Start the session
 
 // Database connection
-include "includes/config.php"; 
+require_once 'include/config.php'; // $mysqli is defined here
+
+
 
 
 $loginMessage = '';
@@ -42,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Close statement
     $stmt->close();
 }
-$conn->close();
+
 ?>
 
 
